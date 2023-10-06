@@ -52,8 +52,6 @@ void Game() {
 		}
 		cout << E << endl;
 
-		E = 0;//CP‚Ìo‚·Žè
-
 		if (P == ROCK) //ƒO[
 		{
 			switch (E) {
