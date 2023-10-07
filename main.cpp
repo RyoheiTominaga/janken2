@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include"janken.h"
+#include"kazuate.h"
 using namespace std;
 int main()
 {
@@ -14,7 +15,7 @@ int main()
     switch (Selects)
     {
     case 1:Game();break;
-    case 2:break;
+    case 2:KazuGame();break;
     }
     
 }
