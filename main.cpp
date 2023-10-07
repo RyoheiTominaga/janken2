@@ -6,8 +6,8 @@
 using namespace std;
 int main()
 {
-    int Selects = -1;
-    while (Selects>0) {
+    int Selects = 0;
+    while (Selects<=0||Selects>=3) {
         cout << "ジャンケンをする場合は1\n数あてをする場合は2を入力してください＞";
         cin >> Selects;
     }
