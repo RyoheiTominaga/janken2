@@ -3,9 +3,20 @@
 
 #include <iostream>
 #include"janken.h"
+using namespace std;
 int main()
 {
-    Game();
+    int Selects = -1;
+    while (Selects>0) {
+        cout << "ジャンケンをする場合は1\n数あてをする場合は2を入力してください＞";
+        cin >> Selects;
+    }
+    switch (Selects)
+    {
+    case 1:Game();break;
+    case 2:break;
+    }
+    
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
