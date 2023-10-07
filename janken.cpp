@@ -33,8 +33,8 @@ JUDGE const judge[9] = {
 };
 
 void Game() {
-	int P = -1, E = -1, a = 5;
-	while (a == 5)
+	int P = -1, E = -1, a = 100;
+	while (a == 100)
 	{
 		while (P < 0 || P>2)
 		{
@@ -80,7 +80,7 @@ void Game() {
 
 		switch (a)
 		{
-		case DOLLOW:cout << "‚ ‚¢‚±" << endl;P = -1;a = 5;break;
+		case DOLLOW:cout << "‚ ‚¢‚±" << endl;P = -1;a = 100;break;
 		case WIN:cout << "‚ ‚È‚½‚ÌŸ‚¿‚Å‚·" << endl;break;
 		case LOSE:cout << "‚ ‚È‚½‚Ì•‰‚¯‚Å‚·" << endl;break;
 		}
