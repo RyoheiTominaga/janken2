@@ -36,6 +36,15 @@ JUDGE const judge[9] = {
 
 void Game() {
 	int P = -1, E = -1, a = 100;
+	srand((unsigned int)time(NULL));
+	E = rand() % 3;
+#ifdef DEBUG_ON
+	switch (E) {
+	case ROCK:cout << "CPはグーを出す\n";break;
+	case PEPAL:cout << "CPはパーを出す\n";break;
+	case SCIOSSORS:cout << "CPはチョキを出す\n";break;
+	}
+#endif // DEBUG_ON
 	while (a == 100)
 	{
 		while (P < 0 || P>2)
@@ -43,17 +52,6 @@ void Game() {
 			cout << "\n何を出しますか？\n0　グー\n1 パー\n2 チョキ\n ";
 			cin >> P;
 		}
-
-		srand((unsigned int)time(NULL));
-		E = rand() % 3;
-#ifdef DEBUG_ON
-		switch (E) {
-		case ROCK:cout << "CPはグーを出す\n";break;
-		case PEPAL:cout << "CPはパーを出す\n";break;
-		case SCIOSSORS:cout << "CPはチョキを出す\n";break;
-		}
-#endif // DEBUG_ON
-
 		switch (E)
 		{
 		case ROCK:cout << "CPはグーを出した" << endl;break;
