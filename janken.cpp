@@ -3,6 +3,8 @@
 #include <iostream>
 #include<ctime>
 
+#define DEBUG_ON
+
 using namespace std;
 
 struct JUDGE {
@@ -44,6 +46,14 @@ void Game() {
 
 		srand((unsigned int)time(NULL));
 		E = rand() % 3;
+#ifdef DEBUG_ON
+		switch (E) {
+		case ROCK:cout << "CPはグーを出す\n";break;
+		case PEPAL:cout << "CPはパーを出す\n";break;
+		case SCIOSSORS:cout << "CPはチョキを出す\n";break;
+		}
+#endif // DEBUG_ON
+
 		switch (E)
 		{
 		case ROCK:cout << "CPはグーを出した" << endl;break;
