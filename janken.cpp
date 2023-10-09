@@ -2,8 +2,7 @@
 #include"janken.h"
 #include <iostream>
 #include<ctime>
-
-//#define DEBUG_ON
+#define DEBUG_ON
 
 using namespace std;
 
