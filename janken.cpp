@@ -38,13 +38,15 @@ void Game() {
 	int P = -1, E = -1, a = 100;
 	srand((unsigned int)time(NULL));
 	E = rand() % 3;
+
 #ifdef DEBUG_ON
 	switch (E) {
-	case ROCK:cout << "CPはグーを出す\n";break;
-	case PEPAL:cout << "CPはパーを出す\n";break;
-	case SCIOSSORS:cout << "CPはチョキを出す\n";break;
+	case ROCK:cout << "\nCPはグーを出す\n";break;
+	case PEPAL:cout << "\nCPはパーを出す\n";break;
+	case SCIOSSORS:cout << "\nCPはチョキを出す\n";break;
 	}
 #endif // DEBUG_ON
+
 	while (a == 100)
 	{
 		while (P < 0 || P>2)
@@ -52,13 +54,15 @@ void Game() {
 			cout << "\n何を出しますか？\n0　グー\n1 パー\n2 チョキ\n ";
 			cin >> P;
 		}
+
 		switch (E)
 		{
-		case ROCK:cout << "CPはグーを出した" << endl;break;
-		case PEPAL:cout << "CPはパーを出した" << endl;break;
-		case SCIOSSORS:cout << "CPはチョキを出した" << endl;break;
+		case ROCK:cout << "CPはグーを出した\n" << endl;break;
+		case PEPAL:cout << "CPはパーを出した\n" << endl;break;
+		case SCIOSSORS:cout << "CPはチョキを出した\n" << endl;break;
 		}
-		cout << E << endl;
+
+		
 
 		if (P == ROCK) //グー
 		{
@@ -68,6 +72,7 @@ void Game() {
 			case SCIOSSORS:a = judge[2].judge;break;
 			}
 		}
+
 		else if (P == PEPAL) //パー
 		{
 			switch (E) {
@@ -76,6 +81,7 @@ void Game() {
 			case SCIOSSORS:a = judge[5].judge;break;
 			}
 		}
+
 		else //チョキ
 		{
 			switch (E)
@@ -88,9 +94,9 @@ void Game() {
 
 		switch (a)
 		{
-		case DOLLOW:cout << "あいこ" << endl;P = -1;a = 100;break;
-		case WIN:cout << "あなたの勝ちです" << endl;break;
-		case LOSE:cout << "あなたの負けです" << endl;break;
+		case DOLLOW:cout << "あいこ\n" << endl;P = -1;a = 100;break;
+		case WIN:cout << "あなたの勝ちです\n" << endl;break;
+		case LOSE:cout << "あなたの負けです\n" << endl;break;
 		}
 	}
 }
