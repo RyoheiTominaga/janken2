@@ -1,6 +1,9 @@
 #include<iostream>
 #include<ctime>
 #include"kazuate.h"
+
+#define DEBUG_ON
+
 using namespace std;
 
 void KazuGame() {
@@ -8,6 +11,11 @@ void KazuGame() {
 	bool victory = false;
 	srand((unsigned int )time(NULL));
 	find = rand() % 10;
+#ifdef DEBUG_ON
+	
+	cout << "CP‚Ì”Žš‚Í" << find << "‚Å‚·B\n";
+
+#endif // DEBUG_ON
 
 	while (victory == false)
 	{
